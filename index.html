@@ -5,9 +5,259 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portafolio</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./css/menubar.css" />
+    <link rel="stylesheet" href="./css/tabs.css" />
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+
+    <!-- <div class="container">
+      <ul class="nav">
+        <button type="button" class="btn-mancha btn btn-success rounded-0">
+          Click me
+        </button>
+
+        <div class="vr"></div>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div> -->
+
+    <header>
+      <div class="container py-4">
+        <div class="card overflow-hidden">
+          <div
+            class="card-header d-flex justify-content-between align-items-center fs-6 header-card"
+          >
+            <div class="d-inline header-card-text">
+              C:\\Users\\Mateo\\Desktop\\portfolio
+            </div>
+            <div class="d-flex gap-1 font-monospace header-card-controls">
+              <button class="btn-retro btn-retro-min px-2">-</button>
+              <button class="btn-retro btn-retro-max px-2">□</button>
+              <button class="btn-retro btn-retro-close px-2">x</button>
+            </div>
+          </div>
+
+          <div class="card-body position-relative p-0">
+            <ul role="menubar" class="can-hover">
+              <li role="menuitem" tabindex="0">Inicio</li>
+              <li role="menuitem" tabindex="0">Proyectos</li>
+              <li role="menuitem" tabindex="0">Sobre mi</li>
+              <li role="menuitem" tabindex="0">Experiencia</li>
+              <li role="menuitem" tabindex="0">Sobre mi</li>
+              <!-- <li role="menuitem" tabindex="0" aria-haspopup="true">
+                Help File
+
+                <ul role="menu">
+                  <li role="menuitem"><a href="#menubar">View Help</a></li>
+                  <li role="menuitem"><a href="#menubar">About</a></li>
+                  
+                </ul>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="row py-3">
+        <!-- COLUMNA -->
+        <div class="col-2">s</div>
+        <!-- COLUMNA -->
+        <div class="col-8">
+          <div class="card overflow-hidden">
+            <div
+              class="card-header d-flex justify-content-between align-items-center fs-6 header-card"
+            >
+              <div class="d-inline header-card-text">
+                C:\\Users\\Mateo\\Desktop\\portfolio
+              </div>
+              <div class="d-flex gap-1 font-monospace header-card-controls">
+                <button class="btn-retro btn-retro-min px-2">-</button>
+                <button class="btn-retro btn-retro-max px-2">□</button>
+                <button class="btn-retro btn-retro-close px-2">x</button>
+              </div>
+            </div>
+
+            <div
+              class="card-body position-relative p-0"
+              style="min-height: 450px"
+            >
+              <!--IMAGEN DE FONDO -->
+              <img
+                src="./src/assets/hero.jpg"
+                class="position-absolute w-100 h-100 object-fit-cover img-hero gradient-bg"
+                alt="Fondo del portafolio"
+              />
+
+              <!-- CONTENIDO DE HERO /  -->
+
+              <div
+                class="position-relative p-4 d-flex justify-content-end align-items-center h-100"
+              >
+                <div
+                  class="rounded p-4 glass-effect text-dark"
+                  style="max-width: 500px"
+                >
+                  <span>Bienvenido a mi "Blog"</span>
+                  <h1 class="display-5 fw-bold mt-2">Hola, soy Sebastian!</h1>
+                  <p class="card-text">
+                    Developer, maker y coleccionista de buenas ideas. Construyo
+                    experiencias digitales con código, curiosidad y un poquito
+                    de magia.
+                  </p>
+                  <button class="btn btn-success">Ver proyectos</button>
+                  <button class="btn btn-success">Contactame</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-footer text-body-secondary d-flex justify-content-between fs-6"
+            >
+              <div>☁ Last updated: 10.13.2026</div>
+              <div>Best viewed at 1024 × 768 · Made with HTML & dreams</div>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center fs-6 header-card"
+              >
+                <div class="d-inline">Mis Ultimos Proyectos</div>
+                <div class="d-flex gap-1 font-monospace">
+                  <button class="btn-retro btn-retro-min px-2">-</button>
+                  <button class="btn-retro btn-retro-max px-2">□</button>
+                  <button class="btn-retro btn-retro-close px-2">x</button>
+                </div>
+              </div>
+              <div class="card-body">
+                <section class="tabs">
+                  <menu role="tablist" aria-label="Tabs Template">
+                    <button
+                      role="tab"
+                      aria-controls="tab-A"
+                      aria-selected="true"
+                    >
+                      Proyectos
+                    </button>
+                    <button role="tab" aria-controls="tab-B">
+                      Experiencia Laboral
+                    </button>
+                    <button role="tab" aria-controls="tab-C">Sobre Mi</button>
+                    <!-- <button role="tab" aria-controls="tab-D" disabled>
+                        Tab D
+                      </button> -->
+                  </menu>
+                  <article role="tabpanel" id="tab-A">
+                    <div class="row">
+                      <div class="col-4"></div>
+                      <div class="col-8">
+                      <h6>Desarrollador FullStack - Ajolote & Grulla Store</h6>
+                      <span>[Septiembre 2026 - Diciembre 2026] </span>
+                      <p>
+                        Desarrollé una plataforma de e-commerce gestionando el
+                        ciclo de vida del software mediante la metodología ágil
+                        Scrum y diseñando las interfaces iniciales en Figma.
+                        Construí el frontend interactivo y responsivo de la
+                        aplicación utilizando HTML, CSS, JavaScript y Bootstrap.
+                        Implementé la arquitectura del backend y la lógica de
+                        negocio del sistema empleando Java y el framework Spring
+                        Boot
+                      </p>
+                      
+
+                      </div>
+                    </div>
+                    <div class="gray-bg">
+                      <h6>
+                        Desarrollador FullStack - PWA de Comunicación Inclusiva
+                        con IA e IoT
+                      </h6>
+                      <span>[Agosto 2025 - Diciembre 2025] </span>
+                      <p>
+                        Construí una Progressive Web App (PWA) integrando
+                        Node.js, Express y MongoDB, desplegando la API RESTful
+                        en contenedores Docker a través de Railway y el frontend
+                        en Vercel. Implementé redes neuronale
+                      </p>
+                    </div>
+                    <div class="p-3">
+                      <h6>Desarrollador FullStack MERN - Papercraft</h6>
+                      <span>[Enero 2025 - Mayo 2025] </span>
+                      <p>
+                        Desarrollé una plataforma web responsiva con panel
+                        administrativo (CRUD) y módulo de clientes, asegurando
+                        la comunicación cliente-servidor mediante APIs RESTful.
+                        Integré WebSockets para reflejar la actualización del
+                        estado de los pedidos en tiempo real.
+                      </p>
+                    </div>
+                  </article>
+                  <article role="tabpanel" id="tab-B" hidden>
+                    <div>
+                      <h6>Service Desk L1 | Softtek - Grupo Lala</h6>
+                      <span>[Enero 2026 - Junio 2026] </span>
+                      <p>
+                        Diagnostiqué y resolví incidentes técnicos de Nivel 1
+                        para usuarios internos, asegurando el cumplimiento de
+                        los Acuerdos de Nivel de Servicio (SLA) en entornos de
+                        alta presión. Gestioné el ciclo de vida de los
+                        incidentes utilizando la plataforma Halo ITSM,
+                        documentando fallas, escalando tickets y administrando
+                        identidades y credenciales bajo estrictas políticas de
+                        seguridad
+                      </p>
+                    </div>
+                    <div class="gray-bg">
+                      <h6>Técnico en Sistemas | Casino Miravalle</h6>
+                      <span>[Abril 2024 - Agosto 2024] </span>
+                      <p>
+                        Ejecuté mantenimiento preventivo y correctivo de
+                        hardware y software, optimizando la infraestructura
+                        tecnológica para reducir los tiempos de respuesta ante
+                        fallas operativas. Configuré e instalé redes locales
+                        (LAN) y brindé soporte técnico a los sistemas internos
+                        de las máquinas de juego para garantizar la continuidad
+                        operativa del negocio
+                      </p>
+                    </div>
+                  </article>
+                  <article role="tabpanel" id="tab-C" hidden>
+                    Tab C is active
+                  </article>
+                  <article role="tabpanel" id="tab-D" hidden>
+                    Tab D is inactive
+                  </article>
+                </section>
+
+                <div class="border projects">
+                  <!-- <div class="p-3">
+                     -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- COLUMNA -->
+        <div class="col-2">s</div>
+      </div>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
