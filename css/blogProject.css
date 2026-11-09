@@ -1,0 +1,75 @@
+.card-project {
+  transition: 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+/* .card-project:hover {
+transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1) !important;
+  transform: rotate(-0deg) scale(1.05);
+  z-index: 10;
+} */
+
+.project-header {
+  box-shadow: 0 2px 3px #6d6d6d;
+  background: linear-gradient(
+    to bottom,
+    #f2f6f8 0%,
+    #d8e1e7 50%,
+    #b5c6d0 51%,
+    #e0eff9 100%
+  );
+  border: 1px solid #7a9ea9;
+  border-radius: 3px;
+}
+
+.project-sidebar {
+  box-shadow: 1px 0px 3px #6d6d6d;
+
+  background-color: #dbe3ed; /* Azul grisáceo claro característico */
+  border-right: 1px solid #a3b8cc;
+  background: linear-gradient(to right, #dbe3ed 85%, #b7c7cf 98%, #dfe7ec 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-content {
+  background-color: #ffffff;
+  min-height: 250px; /* Asegura espacio para la firma al fondo */
+}
+
+.project-signature {
+  background-color: #f7f9fb;
+  font-size: 0.8rem;
+}
+
+/*  ======================
+    MARQUEE 
+    ======================
+*/
+
+.marquee-content {
+  width: max-content;
+  animation: scrolling 9s linear infinite;
+}
+
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+
+.marquee-content li {
+  gap: 0.5rem;
+  padding-right: 1rem;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

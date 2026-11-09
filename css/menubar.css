@@ -2,7 +2,7 @@
 
 
 
-ul[role] {
+ul[role], li {
     cursor: default;
     list-style: none;
     margin: 0;

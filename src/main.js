@@ -1,10 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './style.css';
-
-
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./style.css";
 
 // Tabs
 function tabHandler(e, tabButtons) {
@@ -13,7 +9,7 @@ function tabHandler(e, tabButtons) {
   const tabContainer = e.target.parentElement.parentElement;
   const targetId = e.target.getAttribute("aria-controls");
   tabButtons.forEach((_tabButton) =>
-    _tabButton.setAttribute("aria-selected", false)
+    _tabButton.setAttribute("aria-selected", false),
   );
   e.target.setAttribute("aria-selected", true);
   e.target.focus();
@@ -23,6 +19,11 @@ function tabHandler(e, tabButtons) {
   tabContainer
     .querySelector(`[role=tabpanel]#${targetId}`)
     .removeAttribute("hidden");
+
+  tabContainer.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
 }
 
 // Tabs > Tabs Template
@@ -30,9 +31,11 @@ const templateTabList = document.querySelector("[aria-label='Tabs Template']");
 const templateTabButtons = templateTabList.querySelectorAll("[role=tab]");
 templateTabButtons.forEach((tabButton) =>
   tabButton.addEventListener("mousedown", (evt) => {
-    tabHandler(evt, templateTabButtons)
-  }));
+    tabHandler(evt, templateTabButtons);
+  }),
+);
 templateTabButtons.forEach((tabButton) =>
   tabButton.addEventListener("focus", (evt) => {
-    tabHandler(evt, templateTabButtons)
-  }));
+    tabHandler(evt, templateTabButtons);
+  }),
+);

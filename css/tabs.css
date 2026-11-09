@@ -42,11 +42,11 @@ menu[role="tablist"] button[aria-selected="true"] {
   margin: -2px 0 1px -3px;
   padding-bottom: 4px;
   position: relative;
-  z-index: 8;
+  z-index: 3;
 }
 
 [role="button"]:not(:disabled):hover,
-button:not(:disabled):hover {
+menu button:not(:disabled):hover {
   border-color: #3c7fb1;
   transition: 0.3s;
 
@@ -54,12 +54,12 @@ button:not(:disabled):hover {
 }
 
 [role="button"]:not(:disabled):not(:hover),
-button:not(:disabled):not(:hover) {
+menu button:not(:disabled):not(:hover) {
   border-color: #8e8f8f;
   transition: 1s linear;
 }
 
-[role="button"].default,
+/* [role="button"].default,
 [role="button"].focused,
 [role="button"]:focus,
 button.default,
@@ -69,7 +69,7 @@ button:focus {
   animation: pulse-anim 1s ease infinite alternate;
   background-image: linear-gradient(#eaf6fd 45%, #bee6fd 0, #a7d9f5);
   border-color: #5586a3;
-}
+} */
 
 /* menu[role="tablist"] button {
   border-radius: 0;
@@ -112,6 +112,6 @@ menu[role="tablist"] button {
 
 
 
-[role=tabpanel] div {
+/* [role=tabpanel] div {
     padding: 14px;
-}
+} */
