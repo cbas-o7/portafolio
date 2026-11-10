@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap");
-@import './menubar.css';
-@import './tabs.css';
-@import './forms.css';
-@import './job.css';
-@import './blogProject.css';
-@import './crtBackground.css';
+@import "./menubar.css";
+@import "./tabs.css";
+@import "./forms.css";
+@import "./job.css";
+@import "./blogProject.css";
+@import "./crtBackground.css";
 
 :root {
   --w7-w-grad:
@@ -39,6 +39,10 @@ body {
   backdrop-filter: blur(3px);
   color: #212529 !important;
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a {
+  all:unset;
 }
 
 /*  ======================
@@ -133,7 +137,6 @@ textarea:focus {
   outline: none !important;
 }
 
-
 /*  ======================
     PRIMARY-BUTTON
     ======================
@@ -178,7 +181,6 @@ textarea:focus {
   border-color: #0e2d42;
 }
 
-
 /*  ======================
     SECONDARY-BUTTON
     ======================
@@ -216,8 +218,8 @@ textarea:focus {
     #98d1ef 50%,
     #68b3db
   ) !important;
-  
-    animation: pulse-anim 1s ease infinite alternate;
+
+  animation: pulse-anim 1s ease infinite alternate;
 
   outline: 1px dotted #000 !important;
   outline-offset: -4px;
@@ -227,4 +229,60 @@ textarea:focus {
 
   border-color: #6d91ab;
   transition: border-color 0.3s;
+}
+
+/*  ======================
+    QUICK LINKS
+    ======================
+*/
+
+.button-quicklinks {
+  all: unset;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.button-quicklinks:hover {
+  background: linear-gradient(
+    to bottom,
+    #fff 0%,
+    rgba(0, 0, 0, 0.05) 40%,
+    rgba(0, 0, 0, 0.15) 60%,
+    #fff 100%
+  );
+
+  box-shadow:
+    inset 1px 0 0 rgba(255, 255, 255, 0.6),
+    inset -1px 0 0 rgba(255, 255, 255, 0.6);
+}
+
+.button-quicklinks:hover > img {
+  transition: transform 0.5s ease;
+  transform: translateY(-5px);
+  transform: rotate(2deg) scale(1.05);
+}
+
+.vr {
+  margin: 0 !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  margin: 0 5px; /* Separación horizontal opcional */
+
+  border-left: 1px solid rgba(0, 0, 0, 0.25) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.6) !important;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 50%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 50%,
+    transparent 100%
+  );
 }
