@@ -1,34 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./style.css";
-
-// Tabs
-function tabHandler(e, tabButtons) {
-  e.preventDefault();
-  //selecciona el "section" donde se guardan tanto los buttons como artickes
-  const tabContainer = e.target.parentElement.parentElement;
-  const targetId = e.target.getAttribute("aria-controls");
-  tabButtons.forEach((_tabButton) =>
-    _tabButton.setAttribute("aria-selected", false),
-  );
-  e.target.setAttribute("aria-selected", true);
-  e.target.focus();
-  tabContainer
-    .querySelectorAll("[role=tabpanel]")
-    .forEach((tabPanel) => tabPanel.setAttribute("hidden", true));
-  tabContainer
-    .querySelector(`[role=tabpanel]#${targetId}`)
-    .removeAttribute("hidden");
-
-  tabContainer.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-}
+import { tabHandler } from "./tabs";
 
 // Tabs > Tabs Template
 const templateTabList = document.querySelector("[aria-label='Tabs Template']");
 const templateTabButtons = templateTabList.querySelectorAll("[role=tab]");
+
 templateTabButtons.forEach((tabButton) =>
   tabButton.addEventListener("mousedown", (evt) => {
     tabHandler(evt, templateTabButtons);
@@ -39,3 +17,32 @@ templateTabButtons.forEach((tabButton) =>
     tabHandler(evt, templateTabButtons);
   }),
 );
+
+// NavBar
+const navbarLinks = document.querySelectorAll("[data-target-tab]");
+
+navbarLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const targetTabId = link.getAttribute("data-target-tab");
+
+    const tabButton = document.querySelector(
+      `button[aria-controls="${targetTabId}"]`,
+    );
+
+    if (tabButton) {
+      const eventoMouseDown = new MouseEvent("mousedown", {
+        bubbles: true,
+        cancelable: true,
+        view: window,
+      });
+
+      tabButton.dispatchEvent(eventoMouseDown);
+      /* const ventana = document.getElementById('ventana-portafolio');
+      if (ventana) {
+        ventana.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } */
+    }
+  });
+});

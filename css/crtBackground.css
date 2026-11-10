@@ -1,0 +1,70 @@
+:root{
+  --crt-light__color-first: #00200041;
+  --crt-light__color-second: #000a0050; 
+  --crt-linear__color: #00200033;
+  --crt-linear__height: 5px;
+  --crt-scan__color: #11221166;
+  --crt-text__color: greenyellow;
+}
+
+.crt-overlay {
+  position: fixed; /* Se queda fijo en la pantalla aunque hagas scroll */
+  top: 0; left: 0; width: 100vw; height: 100vh;
+
+  pointer-events: none; /* Deja pasar los clics y el scroll de la rueda */
+  
+  /* Viñeta y líneas de TV */
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.5); 
+  background: repeating-linear-gradient(to bottom, transparent, transparent var(--crt-linear__height), var(--crt-linear__color) var(--crt-linear__height) , var(--crt-linear__color) calc(var(--crt-linear__height) * 2)),
+              radial-gradient(var(--crt-light__color-first), var(--crt-light__color-second));
+  
+  
+  transition: opacity 0.3s ease;
+}
+
+
+
+/* BACKGROUND IMAGE */
+
+/* Reglas compartidas para ambas capas */
+.bg-campo {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -1; /* Se van al fondo de la página */
+}
+
+/* CAPA 2: El campo estático */
+.bg-campo {
+  background-image: url('../src/assets/windows7bg.jpg');
+  background-repeat: no-repeat;
+  
+  /* RESPONSIVIDAD CLAVE */
+  background-position: center bottom; /* Siempre anclado al suelo */
+  background-size: cover; /* Asegura que no queden huecos en blanco, ya sea en celular o monitor ancho */
+}
+
+
+.crt-overlay::after{
+  content: "";
+  background: linear-gradient(to bottom, transparent, transparent 80%, #11221166 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  animation: 3s linear 2s infinite;
+  animation-name: scan-line;
+  mix-blend-mode: color-burn;
+  left: 0;
+  
+}
+
+/* CRT Scan Animation */
+@keyframes scan-line{
+  from{
+    top: -100%;
+  }
+
+  to{
+    top: 100%;
+  }
+}

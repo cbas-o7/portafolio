@@ -1,27 +1,36 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap");
 
 :root {
   --w7-w-bg: #4580c4;
-  --w7-w-grad: linear-gradient(to right, #ffffff66, #0000001a, #ffffff33), var(--w7-w-bg);
+  --w7-w-grad:
+    linear-gradient(to right, #ffffff66, #0000001a, #ffffff33), var(--w7-w-bg);
 
   --w7-wct-bd: #0000004d;
   --w7-wct-bdr: 5px;
   --w7-wct-sd: inset 0 0 0 1px #fffa;
-  --w7-wct-bg: linear-gradient(#ffffff80, #ffffff4d 45%, #0000001a 50%, #0000001a 75%, #ffffff80);
-  --w7-wct-bg-h: radial-gradient(circle at bottom, #2aceda, transparent 65%), linear-gradient(#b6d9ee 50%, #1a6ca1 50%);
-  --w7-wct-bg-a: radial-gradient(circle at bottom, #0bfdfa, transparent 65%), linear-gradient(#86a7bc 50%, #092747 50%);
-  --w7-wct_close-bg: radial-gradient(circle at -60% 50%, #0007 5% 10%, #0000 50%), radial-gradient(circle at 160% 50%, #0007 5% 10%, #0000 50%),
+  --w7-wct-bg: linear-gradient(
+    #ffffff80,
+    #ffffff4d 45%,
+    #0000001a 50%,
+    #0000001a 75%,
+    #ffffff80
+  );
+  --w7-wct-bg-h:
+    radial-gradient(circle at bottom, #2aceda, transparent 65%),
+    linear-gradient(#b6d9ee 50%, #1a6ca1 50%);
+  --w7-wct-bg-a:
+    radial-gradient(circle at bottom, #0bfdfa, transparent 65%),
+    linear-gradient(#86a7bc 50%, #092747 50%);
+  --w7-wct_close-bg:
+    radial-gradient(circle at -60% 50%, #0007 5% 10%, #0000 50%),
+    radial-gradient(circle at 160% 50%, #0007 5% 10%, #0000 50%),
     linear-gradient(#e0a197e5, #cf796a 25% 50%, #d54f36 50%);
 }
 
 body {
- font-family: "Geist Pixel", sans-serif;
+  font-family: "Geist Pixel", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -31,37 +40,56 @@ body {
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.300) ;
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(3px);
   color: #212529 !important;
-  border: 1px solid rgba(255, 255, 255, 0.300);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* --- BOTONES ESTILO SISTEMA OPERATIVO RETRO --- */
 .btn-retro {
-  
-  background: linear-gradient(to bottom, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
+  background: linear-gradient(
+    to bottom,
+    #f2f6f8 0%,
+    #d8e1e7 50%,
+    #b5c6d0 51%,
+    #e0eff9 100%
+  );
   border: 1px solid #7a9ea9;
   border-radius: 3px;
-  
-  
-  
+
   transition: all 0.1s ease;
 }
 
 /* Efecto hover general (azul claro brillante) */
 .btn-retro:hover {
-  background: linear-gradient(to bottom, #eaf6fd 0%, #d9f0fc 50%, #bee6fd 51%, #a7d9f5 100%);
+  background: linear-gradient(
+    to bottom,
+    #eaf6fd 0%,
+    #d9f0fc 50%,
+    #bee6fd 51%,
+    #a7d9f5 100%
+  );
   border-color: #3c7fb1;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), 0 0 3px rgba(60, 127, 177, 0.5);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    0 0 3px rgba(60, 127, 177, 0.5);
 }
 
 /* Efecto hover específico para el botón de cerrar (Rojo brillante) */
 .btn-retro-close:hover {
-  background: linear-gradient(to bottom, #fabbab 0%, #f47a64 50%, #e33827 51%, #d94236 100%);
+  background: linear-gradient(
+    to bottom,
+    #fabbab 0%,
+    #f47a64 50%,
+    #e33827 51%,
+    #d94236 100%
+  );
   border-color: #7b1e16;
   color: white;
-  box-shadow: inset 0 1px 1px rgba(255, 170, 170, 0.9), 0 0 3px rgba(227, 56, 39, 0.5);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 170, 170, 0.9),
+    0 0 3px rgba(227, 56, 39, 0.5);
 }
 
 /* Efecto al hacer clic (se hunde ligeramente) */
@@ -72,19 +100,27 @@ body {
 
 .window {
   border: 1px solid #000000b3;
-  box-shadow: 2px 2px 10px 1px #000000b3, inset 0 0 0 1px #fffa
+  box-shadow:
+    2px 2px 10px 1px #000000b3,
+    inset 0 0 0 1px #fffa;
 }
 
 .header-card {
   background: var(--w7-w-grad);
   box-shadow: inset 0 0 0 1px #fff9;
-
 }
 
 .header-card-text {
   color: #000;
-  text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
-
+  text-shadow:
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff;
 }
 /* 
 .header-card-controls {
@@ -108,7 +144,9 @@ body {
     padding: 0px;
 } */
 
-button:focus, input:focus, textarea:focus   {
+button:focus,
+input:focus,
+textarea:focus {
   outline: none !important;
 }
 
@@ -134,21 +172,31 @@ button:focus, input:focus, textarea:focus   {
 } */
 
 .jobCard {
- background: linear-gradient(#2e67f77e, #2e67f77e), 
-              url('./assets/jobBg.jpg') center / cover no-repeat;
-  box-shadow: 1px 1px 4px #212529, inset 0 1px 1px #2e67f77e;
+  background:
+    linear-gradient(#2e67f77e, #2e67f77e),
+    url("./assets/jobBg.jpg") center / cover no-repeat;
+  box-shadow:
+    1px 1px 4px #212529,
+    inset 0 1px 1px #2e67f77e;
 
   background-color: #2e68f7;
 }
 
 .jobHeader {
-  text-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff;
 
   font-family: "VT323", monospace;
   font-style: normal;
   font-weight: 400;
 }
-
 
 .jobBody {
   padding: 8px;
@@ -157,20 +205,97 @@ button:focus, input:focus, textarea:focus   {
   background: #f9f8c8;
 }
 
-
-
-
-
-
-
 /*  ======================
-    MARQUEE 
+    PRIMARY-BUTTON
     ======================
 */
 
+.primary-button {
+  background: linear-gradient(#e0f0fa 45%, #84c6eb 45%, #50aadc) !important;
+  border: 1px solid #1a5276;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  padding: 0 12px;
+  color: #0b2a42;
+  font-weight: 600;
+}
+
+.primary-button:not(:disabled):hover {
+  background: linear-gradient(#eff7fd 45%, #a6d7f0 45%, #73bce4) !important;
+  border-color: #154360 !important;
+  outline: 1px dotted #000 !important;
+  outline-offset: -4px;
+}
+
+.primary-button.default,
+.primary-button.focused,
+.primary-button:focus {
+  background: linear-gradient(#eff7fd 45%, #a6d7f0 45%, #73bce4) !important;
+  box-shadow: inset 0 0 2px 2px rgba(115, 188, 228, 0.8) !important;
+  border-color: #154360 !important;
+}
+
+.primary-button:not(:disabled).active,
+.primary-button:not(:disabled):active {
+  background: linear-gradient(
+    #b4dcf4,
+    #7bbde1 30% 50%,
+    #3f95c7 50%,
+    #2c78a3
+  ) !important;
+  outline: 1px dotted #000 !important;
+  outline-offset: -4px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4) !important;
+  border-color: #0e2d42;
+}
 
 
+/*  ======================
+    SECONDARY-BUTTON
+    ======================
+*/
 
+.secondary-button {
+  background: linear-gradient(#f2f2f2 45%, #ebebeb 45%, #cfcfcf) !important;
+  border: 1px solid #8e8f8f;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px #fffc;
+  padding: 0 12px;
+}
 
+.secondary-button:not(:disabled):hover {
+  background: linear-gradient(#eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
+  border-color: #3c7fb1 !important;
+  transition: border-color 0.3s;
+  outline: 1px dotted #000 !important;
+  outline-offset: -4px;
+}
 
+.secondary-button.default,
+.secondary-button.focused,
+.secondary-button:focus {
+  background: linear-gradient(#eaf6fd 45%, #bee6fd 0, #a7d9f5) !important;
+  box-shadow: inset 0 0 1px 1px #34deffdd !important;
+  border-color: #5586a3 !important;
+}
 
+.secondary-button:not(:disabled).active,
+.secondary-button:not(:disabled):active {
+  background: linear-gradient(
+    #e5f4fc,
+    #c4e5f6 30% 50%,
+    #98d1ef 50%,
+    #68b3db
+  ) !important;
+  
+    animation: pulse-anim 1s ease infinite alternate;
+
+  outline: 1px dotted #000 !important;
+  outline-offset: -4px;
+  box-shadow:
+    inset 1px 1px 0 #0003,
+    inset -1px 1px 0 #0001 !important;
+
+  border-color: #6d91ab;
+  transition: border-color 0.3s;
+}
