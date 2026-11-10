@@ -1,22 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap");
+@import './menubar.css';
+@import './tabs.css';
+@import './forms.css';
+@import './job.css';
+@import './blogProject.css';
+@import './crtBackground.css';
 
 :root {
-  --w7-w-bg: #4580c4;
   --w7-w-grad:
-    linear-gradient(to right, #ffffff66, #0000001a, #ffffff33), var(--w7-w-bg);
+    linear-gradient(to right, #ffffff66, #0000001a, #ffffff33), #4580c4;
 
-  --w7-wct-bd: #0000004d;
-  --w7-wct-bdr: 5px;
-  --w7-wct-sd: inset 0 0 0 1px #fffa;
-  --w7-wct-bg: linear-gradient(
-    #ffffff80,
-    #ffffff4d 45%,
-    #0000001a 50%,
-    #0000001a 75%,
-    #ffffff80
-  );
   --w7-wct-bg-h:
     radial-gradient(circle at bottom, #2aceda, transparent 65%),
     linear-gradient(#b6d9ee 50%, #1a6ca1 50%);
@@ -46,7 +41,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* --- BOTONES ESTILO SISTEMA OPERATIVO RETRO --- */
+/*  ======================
+    BOTONES ESTILO SISTEMA OPERATIVO RETRO 
+    ======================
+*/
+
 .btn-retro {
   background: linear-gradient(
     to bottom,
@@ -98,6 +97,11 @@ body {
   background: #a9c4d4;
 }
 
+/*  ======================
+    DISEÑOS DE "WINDOWS"
+    ======================
+*/
+
 .window {
   border: 1px solid #000000b3;
   box-shadow:
@@ -122,27 +126,6 @@ body {
     0 0 10px #fff,
     0 0 10px #fff;
 }
-/* 
-.header-card-controls {
-  box-shadow: rgba(255, 255, 255, 0.667) 0px 1px 0px, rgba(255, 255, 255, 0.667) 1px 0px 0px, rgba(255, 255, 255, 0.667) -1px 0px 0px;
-    display: flex;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 0 0 var(--w7-wct-bdr) var(--w7-wct-bdr);
-    border-top: 0px;
-}
-
-.header-card-controls button {
-     box-sizing: border-box;
-    min-height: 19px;
-    min-width: 29px;
-    position: relative;
-    background: none;
-    border-width: 0px 0px 0px;
-    border-style: none none none;
-    border-image: none;
-    border-radius: 0px;
-    padding: 0px;
-} */
 
 button:focus,
 input:focus,
@@ -150,60 +133,6 @@ textarea:focus {
   outline: none !important;
 }
 
-.projects {
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* #tab-B div:nth-child(even) {
-  width: max;
-  background: #e1e1e1; 
-}
-
-#tab-B div:nth-child(even)  :is(h6, span){
-  color: #d54f36;
-}
-#tab-B div:nth-child(odd) {
-  width: max;
-  background: white; 
-}
-
-#tab-B div:nth-child(odd)  :is(h6, span){
-  color: #1a6ca1;
-} */
-
-.jobCard {
-  background:
-    linear-gradient(#2e67f77e, #2e67f77e),
-    url("./assets/jobBg.jpg") center / cover no-repeat;
-  box-shadow:
-    1px 1px 4px #212529,
-    inset 0 1px 1px #2e67f77e;
-
-  background-color: #2e68f7;
-}
-
-.jobHeader {
-  text-shadow:
-    0 0 4px #fff,
-    0 0 4px #fff,
-    0 0 4px #fff,
-    0 0 4px #fff,
-    0 0 4px #fff,
-    0 0 4px #fff,
-    0 0 4px #fff,
-    0 0 4px #fff;
-
-  font-family: "VT323", monospace;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.jobBody {
-  padding: 8px;
-  box-shadow: inset 1px 1px 3px #212529;
-  border-color: #000000a6;
-  background: #f9f8c8;
-}
 
 /*  ======================
     PRIMARY-BUTTON

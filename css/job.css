@@ -1,0 +1,37 @@
+.projects {
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.jobCard {
+  background:
+    linear-gradient(#2e67f77e, #2e67f77e),
+    url("../src/assets/jobBg.jpg") center / cover no-repeat;
+  box-shadow:
+    1px 1px 4px #212529,
+    inset 0 1px 1px #2e67f77e;
+
+  background-color: #2e68f7;
+}
+
+.jobHeader {
+  text-shadow:
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff,
+    0 0 4px #fff;
+
+  font-family: "VT323", monospace;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.jobBody {
+  padding: 8px;
+  box-shadow: inset 1px 1px 3px #212529;
+  border-color: #000000a6;
+  background: #f9f8c8;
+}
