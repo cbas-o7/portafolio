@@ -7,6 +7,8 @@
 @import "./job.css";
 @import "./blogProject.css";
 @import "./crtBackground.css";
+@import "./tooltip.css";
+
 
 :root {
   --w7-w-grad:

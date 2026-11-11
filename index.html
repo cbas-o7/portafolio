@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portafolio</title>
+    <title>Sebastian Cortes | Full Stack Developer</title>
   </head>
   <body>
     <div class="crt-overlay"></div>
@@ -94,7 +94,12 @@
                     experiencias digitales con código, curiosidad y un poquito
                     de magia.
                   </p>
-                  <a class="secondary-button py-1" href="./cv_ErickSebastianCortesTovar.pdf" download="cv_ErickSebastianCortesTovar.pdf">Descarga CV</a>
+                  <a
+                    class="secondary-button py-1"
+                    href="./cv_ErickSebastianCortesTovar.pdf"
+                    download="cv_ErickSebastianCortesTovar.pdf"
+                    >Descarga CV</a
+                  >
                 </div>
               </div>
             </div>
@@ -840,7 +845,7 @@
           </div>
         </div>
         <!-- COLUMNA -->
-        <div class="col-12 col-sm-4 col-lg-4">
+        <div class="col-12 col-sm-4 col-lg-4 pb-5">
           <!-- =======================
                   QUICK LINKS
                ======================= -->
@@ -859,10 +864,13 @@
             </div>
             <div class="card-body p-1">
               <section>
-
                 <div class="d-flex justify-content-center" style="height: 45px">
                   <div class="vr"></div>
-                  <a class="button-quicklinks" href="https://github.com/cbas-o7" target="_blank">
+                  <a
+                    class="button-quicklinks"
+                    href="https://github.com/cbas-o7"
+                    target="_blank"
+                  >
                     <img
                       src="./src/assets/github.webp"
                       alt="JavaScript"
@@ -871,7 +879,11 @@
                     />
                   </a>
                   <div class="vr"></div>
-                  <a class="button-quicklinks" href="mailto:https://www.linkedin.com/in/erick-sebastian-cortes-tovar-3373a1288/" target="_blank">
+                  <a
+                    class="button-quicklinks"
+                    href="https://www.linkedin.com/in/erick-sebastian-cortes-tovar-3373a1288/"
+                    target="_blank"
+                  >
                     <img
                       src="./src/assets/linkedin.ico"
                       alt="JavaScript"
@@ -880,7 +892,11 @@
                     />
                   </a>
                   <div class="vr"></div>
-                  <a class="button-quicklinks" href="mailto:escortes.dev@gmail.com" target="_blank">
+                  <a
+                    class="button-quicklinks"
+                    href="mailto:escortes.dev@gmail.com"
+                    target="_blank"
+                  >
                     <img
                       src="./src/assets/mail.webp"
                       alt="JavaScript"
@@ -918,31 +934,73 @@
                     <legend>Contactame</legend>
                     <form action="" id="contact-form">
                       <div class="group">
-                        <label for="text30">Nombre</label>
-                        <input id="text30" type="text" class="w-100" />
+                        <label for="name">Nombre</label>
+                        <input id="name" name="name" type="text" class="w-100" />
                       </div>
                       <div class="group">
-                        <label for="text31">Correo Electronico</label>
-                        <input id="text31" type="text" class="w-100" />
+                        <label for="email">Correo Electronico</label>
+                        <input id="email" name="email" type="text" class="w-100" />
                       </div>
                       <div class="group">
-                        <label for="text32">Telefono</label>
-                        <input id="text32" type="text" class="w-100" />
+                        <label for="phone">Telefono</label>
+                        <input id="phone" name="phone" type="text" class="w-100" />
                       </div>
                       <div class="group">
-                        <label for="text33">Asunto</label>
-                        <input id="text33" type="text" class="w-100" />
+                        <label for="subject">Asunto</label>
+                        <input id="subject" name="subject" type="text" class="w-100" />
                       </div>
                       <div class="group">
-                        <label for="text34">Mensaje</label>
-                        <textarea id="text34" rows="3" class="w-100"></textarea>
+                        <label for="message">Mensaje</label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows="3"
+                          class="w-100"
+                        ></textarea>
                       </div>
 
-                      <button class="primary-button w-100 my-3 p-1">
+                      <button
+                        type="submit"
+                        id="submit-button"
+                        class="primary-button w-100 my-3 p-1"
+                      >
                         Enviar
                       </button>
                     </form>
                   </fieldset>
+
+                  <!--  -->
+
+                  <div
+                    class="toast-container position-fixed bottom-0 end-0 p-3"
+                  >
+                    
+
+                    <div
+                      role="tooltip"
+                      id="liveToastSuccess"
+                      role="alert"
+                      class="toast"
+
+                      aria-live="assertive"
+                      aria-atomic="true"
+                    >
+                      He recibido tu correo, muchas gracias :&#41;
+                    </div>
+
+                    <div role="tooltip"
+                      id="liveToastFail"
+                      role="alert"
+                      class="toast"
+
+                      aria-live="assertive"
+                      aria-atomic="true">
+                      Hubo un fallo al enviar tu correo, intenta de nuevo &#41;:
+                    </div>
+                    <!--  -->
+                  </div>
+
+                  <!--  -->
                 </section>
               </div>
             </div>
@@ -951,6 +1009,6 @@
       </div>
     </main>
 
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

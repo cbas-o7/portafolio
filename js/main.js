@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../css/style.css";
 import { tabHandler } from "./tabs";
+import { submitEmail } from "./email";
+
 
 // Tabs > Tabs Template
 const templateTabList = document.querySelector("[aria-label='Tabs Template']");
@@ -39,10 +40,9 @@ navbarLinks.forEach((link) => {
       });
 
       tabButton.dispatchEvent(eventoMouseDown);
-      /* const ventana = document.getElementById('ventana-portafolio');
-      if (ventana) {
-        ventana.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } */
     }
   });
 });
+
+//Submit form
+submitEmail()

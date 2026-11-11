@@ -1,5 +1,5 @@
 // Tabs
-export function tabHandler(e, tabButtons) {
+export const tabHandler = (e, tabButtons) => {
   e.preventDefault();
   //selecciona el "section" donde se guardan tanto los buttons como artickes
   const tabContainer = e.target.parentElement.parentElement;
